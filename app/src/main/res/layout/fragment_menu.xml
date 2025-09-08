@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/ThemeGreen"
+        android:layout_margin="16dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:padding="12dp"/>
+
+    <!-- Floating Action Button for Add Dish -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:src="@drawable/add_circle_50dp_oooooo"
+        android:tint="@color/black"
+        app:backgroundTint="@color/ThemeYellow" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

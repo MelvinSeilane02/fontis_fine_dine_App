@@ -11,6 +11,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fontis_fine_dine.adapters.CartAdapter
+import com.example.fontis_fine_dine.models.FoodItem
 
 class CartPageActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -74,7 +76,7 @@ class CartPageActivity : AppCompatActivity() {
             .map { (foodItem, count) ->
                 GroupedFoodItem(
                     name = foodItem.name,
-                    price = foodItem.price,
+                    price = foodItem.price.toString(),
                     imgNme = foodItem.imgNme,
                     catNme = foodItem.catNme,
                     quantity = count

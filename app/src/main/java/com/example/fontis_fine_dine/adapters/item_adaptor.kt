@@ -1,4 +1,4 @@
-package com.example.fontis_fine_dine
+package com.example.fontis_fine_dine.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fontis_fine_dine.PopularOrders
+import com.example.fontis_fine_dine.R
 
 class item_adaptor(private val slideList: List<PopularOrders>) :
     RecyclerView.Adapter<item_adaptor.SlideViewHolder>() {

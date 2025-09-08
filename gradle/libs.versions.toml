@@ -1,6 +1,8 @@
 [versions]
-agp = "8.10.1"
+agp = "8.13.0"
 kotlin = "2.0.21"
+#kotlin = "1.9.20" # Or your project's version
+
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -12,6 +14,7 @@ constraintlayout = "2.2.1"
 appcompatVersion = "1.7.1"
 googleGmsGoogleServices = "4.4.2"
 firebaseDatabase = "21.0.0"
+firebaseFirestoreKtx = "26.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,9 +27,12 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-firestore-ktx = { group = "com.google.firebase", name = "firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+# Add the kotlin-parcelize plugin here
+#kotlin.parcelize = { id = "kotlin-parcelize" }  # ✅ add this line
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
