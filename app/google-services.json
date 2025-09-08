@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "998485746958",
+    "firebase_url": "https://temp-project-27c2d-default-rtdb.firebaseio.com",
+    "project_id": "temp-project-27c2d",
+    "storage_bucket": "temp-project-27c2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998485746958:android:f7188dc38977d53013235f",
+        "android_client_info": {
+          "package_name": "com.example.fontis_fine_dine"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaAcbvBhRtj7Rmg-WzoSW6PPIMIBDdxow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998485746958:android:c7d41121d96ae64313235f",
+        "android_client_info": {
+          "package_name": "com.example.student_info"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaAcbvBhRtj7Rmg-WzoSW6PPIMIBDdxow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
