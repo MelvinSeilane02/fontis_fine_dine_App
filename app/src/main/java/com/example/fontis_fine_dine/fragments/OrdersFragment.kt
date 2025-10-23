@@ -47,9 +47,9 @@ class OrdersFragment : Fragment() {
     }
 
     private fun createMockOrders(): List<Order> {
-        val food1 = FoodItem(name = "Kota", price = 30.00, imgNme = 0, catNme = "Main")
-        val food2 = FoodItem(name = "Fries", price = 15.00, imgNme = 0, catNme = "Sides")
-        val food3 = FoodItem(name = "Coke", price = 10.00, imgNme = 0, catNme = "Drinks")
+        val food1 = FoodItem(name = "Kota", price = "30.00", imgNme = "", catNme = "Main")
+        val food2 = FoodItem(name = "Fries", price = "15.00", imgNme = "", catNme = "Sides")
+        val food3 = FoodItem(name = "Coke", price = "10.00", imgNme = "", catNme = "Drinks")
 
         val o1 = Order(
             orderId = "1001",

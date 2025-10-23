@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AppInsightsSettings">
+    <option name="selectedTabId" value="Firebase Crashlytics" />
     <option name="tabSettings">
       <map>
         <entry key="Firebase Crashlytics">
@@ -9,9 +10,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.fontis_fine_dine" />
-                  <option name="mobileSdkAppId" value="1:998485746958:android:f7188dc38977d53013235f" />
-                  <option name="projectId" value="temp-project-27c2d" />
-                  <option name="projectNumber" value="998485746958" />
+                  <option name="mobileSdkAppId" value="1:199440111541:android:c5d9977b1d457c14306bfc" />
+                  <option name="projectId" value="fontis-dine" />
+                  <option name="projectNumber" value="199440111541" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

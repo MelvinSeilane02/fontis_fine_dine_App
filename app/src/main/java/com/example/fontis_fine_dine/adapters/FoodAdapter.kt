@@ -43,8 +43,8 @@ class FoodAdapter(
         //holder.foodImg.setImageResource(item.imgNme)
         // Bind image (imgNme treated as drawable resource id)
         try {
-            if (item.imgNme != 0) {
-                holder.foodImg.setImageResource(item.imgNme)
+            if (item.imgNme.isNullOrEmpty()) {
+                holder.foodImg.setImageResource(item.imgNme.toIntOrNull() ?: 0)
             } else {
                 holder.foodImg.setImageResource(R.drawable.lunch_dining_icon_black)
             }

@@ -3,6 +3,7 @@ package com.example.fontis_fine_dine.fragments
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -74,9 +75,28 @@ class MenuFragment : Fragment() {
                 }
 
                 val list = snapshots?.documents?.mapNotNull { doc ->
-                    val item = doc.toObject(FoodItem::class.java)
-                    item?.copy(id = doc.id)
+                    try {
+                        val data = doc.data ?: return@mapNotNull null
+
+                        val priceValue = when (val price = data["price"]) {
+                            is Number -> price.toString()        // convert Double/Long → String
+                            is String -> price                   // already a String
+                            else -> "0.0"                        // fallback
+                        }
+
+                        FoodItem(
+                            id = doc.id,
+                            name = data["name"] as? String ?: "",
+                            price = priceValue,                  // ✅ always String
+                            imgNme = data["imgNme"] as? String ?: "",
+                            catNme = data["catNme"] as? String ?: ""
+                        )
+                    } catch (e: Exception) {
+                        Log.e("Firestore", "Error parsing FoodItem: ${e.message}")
+                        null
+                    }
                 } ?: emptyList()
+
 
                 menuItems.clear()
                 menuItems.addAll(list)

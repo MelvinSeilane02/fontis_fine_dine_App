@@ -98,7 +98,7 @@
                 android:textColor="@color/ThemeYellow"
                 android:textSize="25sp" />
 
-            f
+
 
         </LinearLayout>
     </ScrollView>

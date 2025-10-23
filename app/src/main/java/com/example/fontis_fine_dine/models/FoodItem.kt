@@ -1,5 +1,6 @@
 package com.example.fontis_fine_dine.models
 
+import android.R
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import java.io.Serializable
@@ -8,8 +9,8 @@ import java.io.Serializable
 data class FoodItem(
     var id: String = "",
     var name: String = "",
-    var price: Double = 0.0,
-    var imgNme: Int = 0,
+    var price: String  = "0.0",
+    var imgNme: String = "",
     var catNme: String = ""
 ) : Serializable
 

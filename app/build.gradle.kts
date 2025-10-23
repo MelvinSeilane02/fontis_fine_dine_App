@@ -2,11 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    //id("com.google.gms.google-services") apply false
+    //id("com.google.gms.google-services") // ✅ Important for Firebase
     //alias(libs.plugins.kotlin.parcelize) // ✅ this activates @Parcelize support
 }
 
 apply(plugin = "kotlin-parcelize")
-apply (plugin= "com.google.gms.google-services")
+//apply (plugin= "com.google.gms.google-services")
 //apply (plugin = "com.google.gms.google-services")
 
 android {
@@ -54,22 +56,22 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.appcompat)
-    implementation(libs.firebase.database)
-    // implementation(libs.firebase.firestore.ktx)
-    // Firebase Firestore
-    implementation("com.google.firebase:firebase-firestore-ktx:25.1.0")
-    // Use Firebase BoM (platform)
-    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
-    // (optional but recommended)
-    // Firebase libraries WITHOUT explicit versions (BOM controls versions)
-    implementation("com.google.firebase:firebase-firestore-ktx")
-    implementation("com.google.firebase:firebase-auth-ktx")          // if using auth
-    implementation("com.google.firebase:firebase-analytics-ktx")      // optional
+    //implementation(libs.appcompat)
 
-    implementation("com.google.firebase:firebase-storage:21.0.0")
+    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    // ✅ Firebase BoM - central version management
+    //implementation(platform("com.google.firebase:firebase-bom:${libs.versions.firebaseBom.get()}"))
 
-    implementation("com.squareup.picasso:picasso:2.8")
+    // main modules (BOM will supply versions)
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-storage")
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-config")
+
+    implementation("com.squareup.picasso:picasso:2.71828")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

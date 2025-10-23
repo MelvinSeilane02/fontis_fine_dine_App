@@ -5,7 +5,7 @@ import java.io.Serializable
 data class GroupedFoodItem(
     val name: String,
     val price: String,
-    val imgNme: Int,
+    val imgNme: String,
     val catNme: String,
     var quantity: Int
 ) : Serializable

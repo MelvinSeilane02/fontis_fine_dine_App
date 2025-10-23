@@ -53,13 +53,13 @@ class OrderNowLayoutActivity : AppCompatActivity() {
 
         // Sample food data
         foodList = listOf(
-            FoodItem("01","Extreme Russian Hour", 37.00, R.drawable.kota, "Kota Meal (Under R42)"),
-            FoodItem("02","A Kasi's Bacon Kota", 37.00, R.drawable.kota2, "Kota Meal (Under R42)"),
+            FoodItem("01","Extreme Russian Hour", "37.00", "R.drawable.kota", "Kota Meal (Under R42)"),
+            FoodItem("02","A Kasi's Bacon Kota", "37.00", "R.drawable.kota2", "Kota Meal (Under R42)"),
             FoodItem(
                 "03",
                 "The Full Cheese Boi's Patty Express",
-                42.00,
-                R.drawable.kota,
+                "42.00",
+                "R.drawable.kota",
                 "Premium Kota"
             )
         )

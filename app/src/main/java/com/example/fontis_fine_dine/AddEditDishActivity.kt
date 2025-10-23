@@ -1,5 +1,6 @@
 package com.example.fontis_fine_dine
 
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -34,12 +35,14 @@ class AddEditDishActivity : AppCompatActivity() {
         }
 
         btnSave.setOnClickListener {
+
+
             val name = etName.text.toString().trim()
             val price = etPrice.text.toString().trim()
             val cat = etCategory.text.toString().trim()
             val img = etImageUrl.text.toString().trim()
 
-            if (name.isEmpty() || price.isEmpty() || cat.isEmpty()) {
+            if (name.isEmpty() || price == null || cat.isEmpty()) {
                 Toast.makeText(this, "Please fill name, price and category", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -74,6 +77,30 @@ class AddEditDishActivity : AppCompatActivity() {
                         Toast.makeText(this, "Failed: ${e.message}", Toast.LENGTH_SHORT).show()
                     }
             }
+        }
+    }
+    /**
+     * Converts a String to Double safely.
+     * Shows a Toast if invalid (optional) and returns 0.0 by default.
+     */
+    fun convertStringToDouble(value: String, context: Context? = null): Double {
+        return try {
+            val trimmed = value.trim()
+
+            // Check if blank
+            if (trimmed.isEmpty()) {
+                context?.let {
+                    Toast.makeText(it, "Please enter a number", Toast.LENGTH_SHORT).show()
+                }
+                0.0
+            } else {
+                trimmed.toDouble()
+            }
+        } catch (e: NumberFormatException) {
+            context?.let {
+                Toast.makeText(it, "Invalid number format", Toast.LENGTH_SHORT).show()
+            }
+            0.0
         }
     }
 }

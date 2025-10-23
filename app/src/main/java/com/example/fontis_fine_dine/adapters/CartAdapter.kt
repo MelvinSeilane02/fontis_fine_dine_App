@@ -41,7 +41,7 @@ class CartAdapter(
         val item = ItemsClicked[position]
         holder.foodName.text = item.name
         holder.foodPrice.text = /*item.price*/ getPrice(item.price, item.quantity)
-        holder.foodImg.setImageResource(item.imgNme)
+        holder.foodImg.setImageResource(item.imgNme.toIntOrNull() ?: 0)
         holder.itemNum.text = item.quantity.toString()
 
         // SUBTRACT button logic
