@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FFFFFF"> <!-- White background -->
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/tv_admin_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Admin Page"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32" /> <!-- Dark Green -->
+
+    <!-- Decorative line -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFD600" /> <!-- Bright Yellow -->
+
+    <!-- Subtext -->
+    <TextView
+        android:id="@+id/tv_admin_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage menu, orders and user activity"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#4CAF50" /> <!-- Lighter Green -->
+
+    <!-- Example admin button -->
+    <Button
+        android:id="@+id/btn_manage_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Menu Management"
+        android:layout_marginTop="32dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50" /> <!-- Green button -->
+
+    <Button
+        android:id="@+id/btn_view_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Orders"
+        android:layout_marginTop="12dp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFD600" /> <!-- Yellow button -->
+</LinearLayout>

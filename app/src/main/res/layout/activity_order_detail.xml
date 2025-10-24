@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDetailOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order #"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/ThemeGreen"/>
+
+        <TextView
+            android:id="@+id/tvDetailCustomer"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer" />
+
+        <TextView
+            android:id="@+id/tvDetailItems"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Items" />
+
+        <TextView
+            android:id="@+id/tvDetailTotal"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textStyle="bold"
+            android:textColor="@color/ThemeGreen"/>
+
+        <Button
+            android:id="@+id/btnMarkPaid"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark as Paid"
+            android:backgroundTint="@color/ThemeYellow"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnUpdateStatus"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Status"
+            android:backgroundTint="@color/ThemeGreen"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</ScrollView>

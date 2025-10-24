@@ -44,10 +44,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintHorizontal_bias="0.299"
             app:layout_constraintStart_toEndOf="@+id/backBtn"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo_removebg_mini" />
+
+        <ImageView
+            android:id="@+id/optionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/more_vert_efefefe_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="show_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="More Options"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -84,12 +98,6 @@
                 android:textColor="@color/ThemeYellow"
                 android:textSize="25sp" />
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                app:srcCompat="@drawable/keep_calm_msg" />
 
 
         </LinearLayout>
